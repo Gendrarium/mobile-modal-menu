@@ -22,4 +22,4 @@ serve -s ./dist
 
 ## Демо:
 
-[Чтобы посмотреть демо, нажмите сюда.](https://localhost/)
+[Чтобы посмотреть демо, нажмите сюда.](https://mobile-modal-menu.vercel.app/)
