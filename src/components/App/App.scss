@@ -1,0 +1,17 @@
+#root {
+  font-family: 'Golos', Arial, Helvetica, sans-serif;
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.desktop {
+  padding-top: 10px;
+  text-align: center;
+
+  @include mq(767) {
+    display: none;
+  }
+}

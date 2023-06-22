@@ -1,0 +1,22 @@
+.header {
+  min-height: 40px;
+  display: flex;
+  width: 100%;
+  padding: 10px;
+  box-sizing: border-box;
+  border-bottom: 1px solid $color-gray;
+
+  &__menu-button {
+    display: none;
+    cursor: pointer;
+
+    @include mq(767) {
+      display: flex;
+    }
+  }
+
+  &__burger {
+    width: 26px;
+    height: 20px;
+  }
+}

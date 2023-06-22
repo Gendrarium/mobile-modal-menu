@@ -1,0 +1,119 @@
+.lang-select {
+  position: relative;
+
+  &__button {
+    padding: 0 10px;
+    display: flex;
+    align-items: center;
+    border: none;
+    cursor: pointer;
+    color: $color-gray;
+    border: 2px solid rgba(0, 0, 0, 0);
+    box-sizing: border-box;
+
+    &_active {
+      border-radius: 2px;
+      border: 2px solid rgba(131, 188, 255, 0.5);
+      background-color: rgba(29, 125, 237, 0.1);
+    }
+  }
+
+  &__image {
+    width: 12px;
+    height: 12px;
+    border-radius: 6px;
+    margin-right: 11px;
+
+    &_big {
+      width: 18px;
+      height: 18px;
+      border-radius: 9px;
+    }
+  }
+
+  &__key {
+    @extend .mobile-h3;
+    margin-right: 9px;
+  }
+
+  &__arrow {
+    width: 8px;
+    height: 14px;
+    transform: rotate(90deg);
+
+    &-fill {
+      fill: $color-gray-600;
+
+      &_active {
+        fill: $color-blue;
+      }
+    }
+  }
+
+  &__items {
+    background-color: #ffffff;
+    box-shadow: 0px 3px 5px 0px rgba(116, 137, 155, 0.08),
+      0px 1px 18px 0px rgba(116, 137, 155, 0.04),
+      0px 6px 10px 0px rgba(116, 137, 155, 0.06);
+    border-radius: 2px;
+    display: flex;
+    position: absolute;
+    padding: 6px 0;
+    top: 100%;
+    left: 0;
+    z-index: 5;
+    flex-direction: column;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.5s, visibility 0.5s;
+
+    &_open {
+      visibility: visible;
+      opacity: 1;
+    }
+  }
+
+  &__item {
+    color: $color-gray;
+    min-height: 40px;
+    min-width: 180px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+
+    &_title {
+      padding: 8px 15px;
+    }
+  }
+
+  &__title {
+    @extend .body-small-bold;
+  }
+
+  &__item-container {
+    padding: 8px 15px;
+    display: flex;
+    align-items: center;
+    flex: 1 1 auto;
+    width: 100%;
+    height: 100%;
+    outline: none;
+    cursor: pointer;
+
+    &:hover {
+      background-color: $color-gray-bg;
+    }
+  }
+
+  &__span {
+    @extend .body-small;
+  }
+
+  &__tick {
+    margin-left: auto;
+  }
+
+  &__tick-fill {
+    fill: $color-blue;
+  }
+}
